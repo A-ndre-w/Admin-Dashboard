@@ -51,12 +51,14 @@ div {
 
 
     display: grid;
+    grid-template-rows: 8% 32% 16%;
     gap: 30px;
+
 }
 
 .sidebar ul {
     display: grid;
-    gap: 10px;
+    list-style: none;
 }
 
 /* HEADER */
