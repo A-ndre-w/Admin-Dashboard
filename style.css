@@ -28,14 +28,31 @@ time, mark, audio, video {
 
 /* CODE */
 
-div {
-    padding: 15px;
-}
-
 :root {
     --font-size-sidebar: 1.2rem;
     --font-color-sidebar: white;
-    font-family: "Rubik";
+    --font-family: "Rubik";
+}
+
+
+div {
+    font-family: var(--font-family);
+}
+
+.spaced {
+    padding: 15px;
+}
+
+.icon {
+    width: 40px;
+}
+
+.inverted {
+    filter: invert(1);
+}
+
+.text-medium {
+    font-size: 24px;
 }
 
 /* CONTAINER */
@@ -68,16 +85,16 @@ div {
 .sidebar .logo {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    justify-content: start;
 }
 
 .sidebar .logo-icon {
-    width: 25%;
+    width: 22%;
     filter: invert(1);
 }
 
 .sidebar .logo-text {
-    font-size: 30px;
+    font-size: 26px;
     
 }
 
@@ -92,15 +109,10 @@ div {
     align-self: center;
 }
 
-.sidebar ul li .menu-icon {
-    width: 60%;
-    filter: invert(1);
-}
-
 /* HEADER */
 
 .header {
-    background-color: orange;
+    background-color: white;
     grid-column: 2 / 3;
 
     display: grid;
@@ -110,19 +122,34 @@ div {
 
 .header .searchbar-container {
     display: grid;
-    grid-template-columns: 1fr 12fr;
+    grid-template-columns: 1fr 14fr;
     align-items: center;
 }
 
-.searchbar-container .searchbar-icon {
+.searchbar-container .searchbar {
     width: 70%;
-    height: 70%;
+    height: 40%;
+    font-size: 20px;
+    font-family: var(--font-family);
+    border-radius: 20px;
+    background-color: #ddd;
+    border: none;
 }
 
-.searchbar-container .searchbar {
-    width: 50%;
-    height: max(10px, 70%);
-    border-radius: 20px;
+.searchbar-container .searchbar:focus {
+    outline: none;
+}
+
+.user-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 3fr;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
 }
 
 /* MAIN CONTENT */
