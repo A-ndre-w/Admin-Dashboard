@@ -126,7 +126,7 @@ body {
 }
 
 .searchbar-container .searchbar {
-    width: 70%;
+    width: 100%;
     height: 40%;
     font-size: 20px;
     font-family: var(--font-family);
@@ -177,12 +177,17 @@ body {
     padding-bottom: 10px;
 }
 
+.avatar-large {
+    width: 100px;
+}
+
 /* HEADER BUTTONS */
 
 .buttons {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 50px;
 }
 
 .header-button {
@@ -190,8 +195,8 @@ body {
     font-family: var(--font-family);
     color: var(--font-color-sidebar);
     border: 2px solid #baf1ff;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 40px;
+    padding: 15px 20px;
 
 }
 
