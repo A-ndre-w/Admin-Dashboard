@@ -29,11 +29,11 @@ time, mark, audio, video {
 /* CODE */
 
 :root {
-    --font-size-sidebar: 1.2rem;
+    --font-size-large: 24px;
     --font-color-sidebar: white;
     --font-family: "Rubik";
+    --font-size-medium: 20px;
 }
-
 
 div {
     font-family: var(--font-family);
@@ -51,10 +51,6 @@ div {
     filter: invert(1);
 }
 
-.text-medium {
-    font-size: 24px;
-}
-
 /* CONTAINER */
 
 .container {
@@ -69,7 +65,7 @@ div {
 
 .sidebar {
     background-color: #fbcfe8;
-    font-size: var(--font-size-sidebar);
+    font-size: var(--font-size-large);
     color: var(--font-color-sidebar);
     font-weight: 600;
     grid-column: 1 / 2;
@@ -120,6 +116,8 @@ div {
     grid-template-rows: repeat(2, 1fr);
 }
 
+/* SEARCHBAR */
+
 .header .searchbar-container {
     display: grid;
     grid-template-columns: 1fr 14fr;
@@ -140,9 +138,13 @@ div {
     outline: none;
 }
 
+/* USER INFO */
+
 .user-info-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 3fr;
+    gap: 30px;
+    font-size: var(--font-size-medium);
     align-items: center;
 }
 
@@ -151,6 +153,32 @@ div {
     height: auto;
     border-radius: 50%;
 }
+
+.user-info-username {
+    display: flex;
+}
+
+/* USER GREETING */
+
+.user-greeting {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.user-greeting-username {
+    font-size: var(--font-size-large);
+}
+
+.greetings-small {
+    display: block;
+    font-size: 80%;
+    padding-bottom: 10px;
+}
+
+/* HEADER BUTTONS */
+
+
 
 /* MAIN CONTENT */
 
