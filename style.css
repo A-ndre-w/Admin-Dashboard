@@ -74,15 +74,15 @@ body {
 
 
     display: grid;
-    grid-template-rows: 8% 32% 16%;
-    gap: 60px;
-
+    grid-template-rows: 6% 24% 12%;
+    gap: 40px;
 }
 
 .sidebar .logo {
     display: flex;
     align-items: center;
     justify-content: start;
+    height: 100px;
 }
 
 .sidebar .logo-icon {
@@ -114,7 +114,6 @@ body {
 
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: repeat(2, 1fr);
 }
 
 /* SEARCHBAR */
@@ -123,6 +122,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 14fr;
     align-items: center;
+    align-self: center;
+    height: 100px;
 }
 
 .searchbar-container .searchbar {
@@ -147,6 +148,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     font-size: var(--font-size-medium);
+    padding-right: 20px;
 }
 
 .user-avatar {
@@ -200,7 +202,9 @@ body {
 
 }
 
+
 /* MAIN CONTENT */
+
 
 .main-content {
     background-color: grey;
@@ -216,4 +220,10 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.article {
+    background-color: white;
+
 }
