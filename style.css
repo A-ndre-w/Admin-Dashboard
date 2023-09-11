@@ -104,6 +104,10 @@ body {
     justify-content: start;
 }
 
+.sidebar .logo .logo-text {
+    font-size: 32px;
+}
+
 .sidebar .logo-icon {
     width: 22%;
     filter: invert(1);
@@ -241,18 +245,17 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 6fr 1fr 6fr;
-    gap: 30px;
-
+    gap: 10px 30px;
     padding-top: 20px;
 }
 
 .projects-title, .announcements-title, .trending-title {
-    align-self: end;
+    align-self: center;
 }
 
 .white-box {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 1px 1px 3px #555;
 }
 
@@ -300,10 +303,11 @@ body {
 /* ANNOUNCEMENTS */
 
 .announcements-content {
-    display: grid;
-    align-items: center;
-    gap: 15px;
     padding: 20px;
+}
+
+.announcements-content > div {
+    margin-bottom: 20px;
 }
 
 .line {
