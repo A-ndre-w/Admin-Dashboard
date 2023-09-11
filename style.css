@@ -29,7 +29,7 @@ time, mark, audio, video {
 /* CODE */
 
 :root {
-    --color-primary: #fbcfe8;
+    --color-primary: #ffe2f2;
     --color-secondary: #f0f9ff;
     --font-size-large: 20px;
     --font-size-medium: 16px;
@@ -94,28 +94,27 @@ body {
 
 
     display: grid;
-    grid-template-rows: 100px 300px 100px;
+    grid-template-rows: 100px 300px auto;
     gap: 40px;
 }
 
-.sidebar .logo {
+.logo-container {
+    text-decoration: none;
+    color: white;
+
     display: flex;
     align-items: center;
-    justify-content: start;
+    padding: 20px 0;
 }
 
-.sidebar .logo .logo-text {
-    font-size: 32px;
-}
-
-.sidebar .logo-icon {
+.logo-icon {
     width: 22%;
     filter: invert(1);
 }
 
-.sidebar .logo-text {
-    font-size: 26px;
-    
+
+.logo-text {
+    font-size: 2rem;
 }
 
 .sidebar ul {
