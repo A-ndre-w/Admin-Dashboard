@@ -34,6 +34,7 @@ time, mark, audio, video {
     --font-size-medium: 16px;
     --font-size-small: 14px;
     --font-color-sidebar: white;
+    --font-color-fade: #444;
     --font-family: "Rubik";
 }
 
@@ -53,18 +54,38 @@ body {
     filter: invert(1);
 }
 
+.block {
+    display: blocK;
+}
+
+.fade {
+    color: var(--font-color-fade);
+}
+
+.text-large {
+    font-size: var(--font-size-large)
+}
+
+.text-medium {
+    font-size: var(--font-size-medium)
+}
+
+.text-small {
+    font-size: var(--font-size-small);
+}
+
 /* CONTAINER */
 
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    position: relative;
 }
 
 /* SIDEBAR */
 
 .sidebar {
     background-color: var(--color-primary);
-    font-size: var(--font-size-large);
     color: var(--font-color-sidebar);
     font-weight: 600;
     grid-column: 1 / 2;
@@ -170,10 +191,6 @@ body {
     align-items: center;
 }
 
-.user-greeting-username {
-    font-size: var(--font-size-large);
-}
-
 .greetings-small {
     display: block;
     font-size: 80%;
@@ -199,7 +216,7 @@ body {
     color: var(--font-color-sidebar);
     border: 2px solid #baf1ff;
     border-radius: 40px;
-    padding: 15px 20px;
+    padding: 10px 20px;
 
 }
 
@@ -219,9 +236,17 @@ body {
     padding-top: 20px;
 }
 
-.projects-title, .announcements-title, .trendings-title {
+.projects-title, .announcements-title, .trending-title {
     align-self: end;
 }
+
+.article, .announcements-content, .trending-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* ARTICLES */
 
 .articles {
     grid-row: 2 / 5;
@@ -231,12 +256,6 @@ body {
     gap: 30px;
 }
 
-.article, .announcements-content, .trending-content  {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-}
-
 .article {
     display: flex;
     flex-direction: column;
@@ -244,12 +263,10 @@ body {
 }
 
 .article-title {
-    font-size: var(--font-size-medium);
     font-weight: 600;
 }
 
 .article-text {
-    font-size: var(--font-size-medium);
     width: 90%;
 }
 
@@ -261,17 +278,25 @@ body {
 
 }
 
+/* ANNOUNCEMENTS */
+
 .announcements-content {
     display: grid;
     align-items: center;
     gap: 15px;
 }
 
-.text-small {
-    font-size: var(--font-size-small);
-}
-
 .line {
     height: 1px;
     background: black;
 }
+
+/* TRENDING */
+
+.trending-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    align-items: center;
+}
+
