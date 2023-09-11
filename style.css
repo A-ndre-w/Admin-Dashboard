@@ -30,10 +30,10 @@ time, mark, audio, video {
 
 :root {
     --color-primary: #fbcfe8;
-    --font-size-large: 24px;
+    --font-size-large: 20px;
     --font-color-sidebar: white;
     --font-family: "Rubik";
-    --font-size-medium: 20px;
+    --font-size-medium: 16px;
 }
 
 body {
@@ -41,11 +41,11 @@ body {
 }
 
 .spaced {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .icon {
-    width: 40px;
+    width: 30px;
 }
 
 .inverted {
@@ -55,11 +55,8 @@ body {
 /* CONTAINER */
 
 .container {
-    background-color: aquamarine;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
-
+    grid-template-columns: 1fr 5fr;
 }
 
 /* SIDEBAR */
@@ -74,15 +71,14 @@ body {
 
 
     display: grid;
-    grid-template-rows: 6% 24% 12%;
-    gap: 40px;
+    grid-template-rows: 100px 260px 100px;
+    gap: 50px;
 }
 
 .sidebar .logo {
     display: flex;
     align-items: center;
     justify-content: start;
-    height: 100px;
 }
 
 .sidebar .logo-icon {
@@ -98,6 +94,7 @@ body {
 .sidebar ul {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(6, 40px);
     list-style: none;
     padding-left: 40px;
 }
@@ -109,11 +106,14 @@ body {
 /* HEADER */
 
 .header {
+    position: relative;
     background-color: white;
+    
     grid-column: 2 / 3;
 
     display: grid;
     grid-template-columns: 3fr 2fr;
+    box-shadow: 2px 2px 5px #333;
 }
 
 /* SEARCHBAR */
@@ -128,7 +128,7 @@ body {
 
 .searchbar-container .searchbar {
     width: 100%;
-    height: 40%;
+    height: 30%;
     font-size: 20px;
     font-family: var(--font-family);
     border-radius: 20px;
@@ -152,7 +152,7 @@ body {
 }
 
 .user-avatar {
-    width: 80px;
+    width: 60px;
     height: auto;
     border-radius: 50%;
 }
@@ -180,7 +180,7 @@ body {
 }
 
 .avatar-large {
-    width: 100px;
+    width: 80px;
 }
 
 /* HEADER BUTTONS */
@@ -207,12 +207,19 @@ body {
 
 
 .main-content {
-    background-color: grey;
+    background-color: #eee;
     grid-column: 2 / 3;
 
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 6fr 1fr 6fr;
+    gap: 20px;
+
+    padding-top: 20px;
+}
+
+.projects-title, .announcements-title, .trendings-title {
+    align-self: end;
 }
 
 .articles {
@@ -223,7 +230,25 @@ body {
     gap: 30px;
 }
 
-.article {
+.article, .announcements-content, .trending-content  {
     background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
 
+.article-title {
+    font-size: var(--font-size-medium);
+    padding-bottom: 10px;
+}
+
+.article-text {
+    font-size: 14px;
+    width: 90%;
+}
+
+.icons {
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: right;
 }
