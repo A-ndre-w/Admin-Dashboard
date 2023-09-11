@@ -154,7 +154,7 @@ body {
     font-size: 20px;
     font-family: var(--font-family);
     border-radius: 20px;
-    background-color: #ddd;
+    background-color: #d6f7ff;
     border: none;
 }
 
@@ -214,7 +214,7 @@ body {
     background-color: var(--color-primary);
     font-family: var(--font-family);
     color: var(--font-color-sidebar);
-    border: 2px solid #baf1ff;
+    border: 2px solid #d6f7ff;
     border-radius: 40px;
     padding: 10px 20px;
 
@@ -225,7 +225,7 @@ body {
 
 
 .main-content {
-    background-color: #eee;
+    background-color: #d6f7ff;
     grid-column: 2 / 3;
 
     display: grid;
@@ -252,7 +252,7 @@ body {
     grid-row: 2 / 5;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
