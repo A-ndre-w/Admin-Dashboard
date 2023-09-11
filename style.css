@@ -31,9 +31,10 @@ time, mark, audio, video {
 :root {
     --color-primary: #fbcfe8;
     --font-size-large: 20px;
+    --font-size-medium: 16px;
+    --font-size-small: 14px;
     --font-color-sidebar: white;
     --font-family: "Rubik";
-    --font-size-medium: 16px;
 }
 
 body {
@@ -213,7 +214,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 6fr 1fr 6fr;
-    gap: 20px;
+    gap: 30px;
 
     padding-top: 20px;
 }
@@ -236,19 +237,41 @@ body {
     padding: 30px;
 }
 
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .article-title {
     font-size: var(--font-size-medium);
-    padding-bottom: 10px;
+    font-weight: 600;
 }
 
 .article-text {
-    font-size: 14px;
+    font-size: var(--font-size-medium);
     width: 90%;
 }
 
-.icons {
+.article-icons {
     padding-top: 30px;
     display: flex;
     gap: 10px;
-    justify-content: right;
+    align-self: flex-end;
+
+}
+
+.announcements-content {
+    display: grid;
+    align-items: center;
+    gap: 15px;
+}
+
+.text-small {
+    font-size: var(--font-size-small);
+}
+
+.line {
+    height: 1px;
+    background: black;
 }
