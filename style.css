@@ -30,6 +30,7 @@ time, mark, audio, video {
 
 :root {
     --color-primary: #fbcfe8;
+    --color-secondary: #f0f9ff;
     --font-size-large: 20px;
     --font-size-medium: 16px;
     --font-size-small: 14px;
@@ -93,8 +94,8 @@ body {
 
 
     display: grid;
-    grid-template-rows: 100px 260px 100px;
-    gap: 50px;
+    grid-template-rows: 100px 300px 100px;
+    gap: 40px;
 }
 
 .sidebar .logo {
@@ -115,14 +116,21 @@ body {
 
 .sidebar ul {
     display: grid;
-    grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(6, 40px);
+    gap: 10px;
     list-style: none;
-    padding-left: 40px;
 }
 
 .sidebar ul li {
     align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* HEADER */
@@ -154,7 +162,8 @@ body {
     font-size: 20px;
     font-family: var(--font-family);
     border-radius: 20px;
-    background-color: #d6f7ff;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     border: none;
 }
 
@@ -214,7 +223,7 @@ body {
     background-color: var(--color-primary);
     font-family: var(--font-family);
     color: var(--font-color-sidebar);
-    border: 2px solid #d6f7ff;
+    border: 2px solid var(--color-secondary);
     border-radius: 40px;
     padding: 10px 20px;
 
@@ -225,7 +234,7 @@ body {
 
 
 .main-content {
-    background-color: #d6f7ff;
+    background-color: var(--color-secondary);
     grid-column: 2 / 3;
 
     display: grid;
